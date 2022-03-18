@@ -1,0 +1,20 @@
+include textbox
+
+mixin register-textbox(type, name, placeholder, value, title, pattern, autofocus, addon, error)
+  if addon
+    if error
+      .form-group.input-group-lg.has-danger
+        .input-group
+          +textbox(type, name, placeholder, value, title, pattern, 'required', autofocus, 'form-control-lg', addon, null)
+        .alert.alert-danger #{error}
+    else
+      .form-group.input-group-lg
+        .input-group
+          +textbox(type, name, placeholder, value, title, pattern, 'required', autofocus, 'form-control-lg', addon, false)
+  else
+    if error
+      .form-group.input-group-lg.has-danger
+        +textbox(type, name, placeholder, value, title, pattern, 'required', autofocus, 'form-control-lg', addon, error)
+    else
+      .form-group.input-group-lg
+        +textbox(type, name, placeholder, value, title, pattern, 'required', autofocus, 'form-control-lg', addon, false)

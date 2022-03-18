@@ -1,0 +1,16 @@
+extends layout
+
+block nav
+  li.nav-item
+    a(href='/').nav-link Home
+  li.nav-item
+    if loggedIn
+      a(href='/logout').nav-link Logout
+    else
+      a(href='/login').nav-link Login
+  li.nav-item.active
+    a(href='/about').nav-link About
+
+block content
+  section
+    include:marked /README.md

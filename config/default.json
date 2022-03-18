@@ -1,0 +1,33 @@
+{
+  "domain": "vn.al",
+  "port": 80,
+  "db": "mongodb://db/dev",
+  "contact": "root@vn.al",
+  "dns": {
+    "host": "0.0.0.0",
+    "port": 53,
+    "records": [
+      {
+        "name": null,
+        "type": "NS",
+        "data": "ns1.vn.al"
+      },
+      {
+        "name": "ns1",
+        "type": "A",
+        "data": "194.29.186.56"
+      },
+      {
+        "name": null,
+        "type": "A",
+        "data": "194.29.186.56"
+      }
+    ]
+  },
+  "ipRangeBlacklist": [
+    "127.0.0.0/8"
+  ],
+  "subdomainBlacklist": [
+    "www"
+  ]
+}

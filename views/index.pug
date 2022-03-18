@@ -1,0 +1,18 @@
+extends layout
+
+block nav
+  li.nav-item.active
+    a(href='/').nav-link Home
+  li.nav-item
+    if loggedIn
+      a(href='/logout').nav-link Logout
+    else
+      a(href='/login').nav-link Login
+  li.nav-item
+    a(href='/about').nav-link About
+
+block content
+  if loggedIn
+    include partials/user
+  else
+    include partials/home

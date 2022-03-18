@@ -1,0 +1,30 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    title #{domain} - #{title}
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Open+Sans:400,300')
+    link(rel='stylesheet', href='/style.css')
+
+    block head
+
+  body
+    main.container.mt-4
+      header.mb-4
+        nav
+          ul.nav.nav-pills.float-right
+            block nav
+
+        h1.mb-4.text-muted #{domain}
+
+      block content
+
+    footer
+      section.container.text-muted
+        .row
+          .col-6
+            p #{domain}
+          .col-6
+            p.text-right Your IP is #{ip}
